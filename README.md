@@ -20,11 +20,9 @@ A full-featured Loan Management System designed to streamline loan applications,
 
 | Layer        | Technology                  |
 |--------------|-----------------------------|
-| Frontend     | React / Angular / Vue       |
-| Backend      | Node.js / Django / Spring Boot |
-| Database     | PostgreSQL / MySQL / MongoDB |
-| Authentication | JWT / OAuth                |
-| Hosting      | Heroku / AWS / Render        |
+| Frontend     | React        |
+| Authentication | Firebase               |
+| Hosting      | Vercel        |
 
 > _Replace with your actual tech stack._
 
