@@ -12,7 +12,6 @@ A full-featured Loan Management System designed to streamline loan applications,
 - 💸 Repayment tracking
 - 📊 Dashboard with loan statistics
 - 🔐 Secure authentication and role-based access
-- ✉️ Email notifications for application updates
 
 ---
 
@@ -24,7 +23,6 @@ A full-featured Loan Management System designed to streamline loan applications,
 | Authentication | Firebase               |
 | Hosting      | Vercel        |
 
-> _Replace with your actual tech stack._
 
 ---
 
@@ -34,3 +32,4 @@ A full-featured Loan Management System designed to streamline loan applications,
    ```bash
    git clone https://github.com/rohit-godara/LoanMate
    cd loanmate
+   ```
