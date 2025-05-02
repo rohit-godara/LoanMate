@@ -34,5 +34,5 @@ A full-featured Loan Management System designed to streamline loan applications,
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/loan-app.git
-   cd loan-app
+   git clone https://github.com/rohit-godara/LoanMate
+   cd loanmate
