@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
 
 const CalculatorPage = () => {
   const [loanAmount, setLoanAmount] = useState(100000);
   const [interestRate, setInterestRate] = useState(10.5);
-  const [loanTerm, setLoanTerm] = useState(36); // in months
+  const [loanTerm, setLoanTerm] = useState(36);
 
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
@@ -31,8 +31,7 @@ const CalculatorPage = () => {
     setTotalInterest(interest.toFixed(2));
   };
 
-  // Run calculation whenever input changes
-  React.useEffect(() => {
+  useEffect(() => {
     calculateLoan();
   }, [loanAmount, interestRate, loanTerm]);
 
@@ -41,29 +40,33 @@ const CalculatorPage = () => {
     { name: 'Interest Amount', value: Number(totalInterest) },
   ];
 
-  const COLORS = ['#4C1D95', '#65A30D']; // Purple, Green
+  const COLORS = ['#4C1D95', '#65A30D'];
 
   return (
-    <div className="min-h-screen bg-grey/95 text-gray-800 flex flex-col items-center px-4 py-10">
-      <h1 className="text-4xl font-bold text-blue-500 mb-2">Loan Calculator</h1>
+    <div className="min-h-screen bg-gray-50 text-gray-800 flex flex-col items-center px-4 py-10">
+      <h1 className="text-3xl sm:text-4xl font-bold text-purple-800 mb-2">Loan Calculator</h1>
       <div className="h-1 w-20 bg-green-500 mb-4 rounded-full"></div>
       <p className="max-w-xl text-center text-gray-600 mb-10">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio sem, tempor egestas libero at, fermentum posuere quam.
+        Estimate your EMI and understand the breakdown of your loan repayment over time.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-6xl">
-        {/* Left: Input Form */}
-        <div className="bg-white p-6 rounded-lg shadow-md text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+        {/* Input Form */}
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4 text-purple-700">Loan Details</h2>
+
           {/* Loan Amount */}
-          <div className="mb-6 text-black">
-            <label className="block font-semibold mb-2">Loan Amount:</label>
-            <div className="flex items-center space-x-2">
-              <span className="bg-white px-2 py-1 rounded text-black">₹</span>
+          <div className="mb-6">
+            <label className="block font-semibold text-sm text-gray-700 mb-1">Loan Amount</label>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-600">₹</span>
               <input
                 type="number"
                 value={loanAmount}
+                min="1000"
+                step="1000"
                 onChange={(e) => setLoanAmount(e.target.value)}
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border border-gray-300 rounded"
               />
             </div>
             <input
@@ -78,16 +81,16 @@ const CalculatorPage = () => {
           </div>
 
           {/* Interest Rate */}
-          <div className="mb-6 text-black">
-            <label className="block font-semibold mb-2">Interest Rate :</label>
-            <div className="flex items-center space-x-2">
-              <span className="bg-white px-2 py-1 rounded text-black">%</span>
+          <div className="mb-6">
+            <label className="block font-semibold text-sm text-gray-700 mb-1">Interest Rate</label>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-600">%</span>
               <input
                 type="number"
                 step="0.1"
                 value={interestRate}
                 onChange={(e) => setInterestRate(e.target.value)}
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border border-gray-300 rounded"
               />
             </div>
             <input
@@ -102,15 +105,18 @@ const CalculatorPage = () => {
           </div>
 
           {/* Loan Term */}
-          <div className='text-black'>
-            <label className="block font-semibold mb-2">Loan Tenure :</label>
-            <div className="flex items-center space-x-2">
-              <span className="bg-white px-2 py-1 rounded text-black">Months</span>
+          <div>
+            <label className="block font-semibold text-sm text-gray-700 mb-1">Loan Tenure</label>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-600">Months</span>
               <input
                 type="number"
+                min="6"
+                max="360"
+                step="1"
                 value={loanTerm}
                 onChange={(e) => setLoanTerm(e.target.value)}
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border border-gray-300 rounded"
               />
             </div>
             <input
@@ -125,27 +131,27 @@ const CalculatorPage = () => {
           </div>
         </div>
 
-        {/* Center: EMI Details */}
-        <div className="p-6 rounded-lg shadow-md text-black bg-white">
-          <h2 className="text-xl font-bold text-center py-2 rounded mb-4">Your EMI Details</h2>
-          <div className="space-y-4 text-center text-blue-500 text-lg font-semibold">
+        {/* EMI Summary */}
+        <div className="bg-white p-6 rounded-lg shadow-md text-center">
+          <h2 className="text-xl font-bold text-purple-700 mb-4">Your EMI Details</h2>
+          <div className="space-y-6 text-lg font-semibold">
             <div>
-              <p className='text-black'>Loan EMI</p><br />
-              <span className="text-3xl">₹{monthlyPayment}</span>
+              <p className="text-gray-700 mb-1">Loan EMI</p>
+              <span className="text-2xl text-green-600">₹{monthlyPayment}</span>
             </div>
             <div>
-              <p className='text-black'>Total Interest Payable</p><br />
-              <span className="text-3xl">₹{totalInterest}</span>
+              <p className="text-gray-700 mb-1">Total Interest Payable</p>
+              <span className="text-2xl text-red-500">₹{totalInterest}</span>
             </div>
             <div>
-              <p className='text-black'>Total Payment</p><br />
-              <span className="text-3xl">₹{totalPayment}</span>
+              <p className="text-gray-700 mb-1">Total Payment</p>
+              <span className="text-2xl text-blue-600">₹{totalPayment}</span>
             </div>
           </div>
         </div>
 
-        {/* Right: Donut Chart */}
-        <div className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center text-white">
+        {/* Chart */}
+        <div className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center">
           <PieChart width={250} height={250}>
             <Pie
               data={data}

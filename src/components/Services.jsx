@@ -41,28 +41,29 @@ const services = [
 ];
 
 const Services = () => (
-  <section className="bg-grey text-white py-16 px-4">
+  <section className="bg-gray-50 text-black py-16 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-4">Our Services</h2>
-      <p className="text-gray-400 mb-10 max-w-2xl">
+      <h2 className="text-3xl sm:text-4xl font-bold text-purple-700 mb-4">Our Services</h2>
+      <p className="text-gray-600 mb-10 max-w-2xl">
         Explore our loan and credit solutions with some of the lowest interest rates in India.
       </p>
-      <div className="grid md:grid-cols-3 gap-8">
-        {services.map((s, i) => (
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {services.map((service, i) => (
           <a
             key={i}
-            href={s.link}
+            href={service.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition block"
+            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform duration-200 block"
           >
             <div className="flex justify-center mb-4">
               <div className="bg-green-500 text-white p-4 rounded-full">
-                {s.icon}
+                {service.icon}
               </div>
             </div>
-            <h3 className="text-center text-xl font-semibold text-black mb-2">{s.title}</h3>
-            <p className="text-gray-400 text-center">{s.description}</p>
+            <h3 className="text-center text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
+            <p className="text-center text-gray-600 text-sm">{service.description}</p>
           </a>
         ))}
       </div>

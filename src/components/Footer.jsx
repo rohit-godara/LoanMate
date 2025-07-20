@@ -4,45 +4,58 @@ import { FaTwitter, FaFacebookF, FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-8 px-4 ">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <footer className="bg-black text-white py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
         {/* Quick Links */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
-            <li><Link to="/services" className="hover:text-blue-400">Services</Link></li>
-            <li><Link to="/calculator" className="hover:text-blue-400">Calculator</Link></li>
+            <li>
+              <Link to="/" className="hover:text-blue-400 transition-colors duration-200">Home</Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-blue-400 transition-colors duration-200">Services</Link>
+            </li>
+            <li>
+              <Link to="/calculator" className="hover:text-blue-400 transition-colors duration-200">Calculator</Link>
+            </li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact</h3>
-          <ul className="space-y-2">
+          <ul className="space-y-3 text-sm">
             <li className="flex items-center">
-              <FaPhone className="mr-2" /> +1 (555) 123-4567
+              <FaPhone className="mr-3 text-blue-400" /> 
+              <span>+1 (555) 123-4567</span>
             </li>
             <li className="flex items-center">
-              <FaTwitter className="mr-2" />
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">@yourhandle</a>
+              <FaTwitter className="mr-3 text-blue-400" />
+              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
+                @yourhandle
+              </a>
             </li>
             <li className="flex items-center">
-              <FaFacebookF className="mr-2" />
-              <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">facebook.com/yourpage</a>
+              <FaFacebookF className="mr-3 text-blue-400" />
+              <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
+                facebook.com/yourpage
+              </a>
             </li>
           </ul>
         </div>
 
-        {/* Optional Extra Column (Brand or Logo) */}
-        <div className="text-center md:text-left">
+        {/* Brand / Info */}
+        <div className="text-center sm:text-left">
           <h3 className="text-xl font-semibold mb-4">Loan Mate</h3>
-          <p className="text-gray-300">Estimate your loan payments smarter and faster.</p>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Estimate your loan payments smarter and faster.
+          </p>
         </div>
       </div>
 
-      <div className="mt-8 text-center text-sm text-gray-300">
+      <div className="mt-10 text-center text-xs text-gray-400">
         &copy; {new Date().getFullYear()} Loan Mate. All rights reserved.
       </div>
     </footer>
