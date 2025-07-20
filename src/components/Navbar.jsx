@@ -18,13 +18,13 @@ const Navbar = () => {
           <li><Link to="/" className="hover:text-purple-700">Home</Link></li>
           <li><Link to="/calculator" className="hover:text-purple-700">Calculator</Link></li>
           <li><Link to="/services" className="hover:text-purple-700">Services</Link></li>
-          <li><Link to="/ai" className="hover:text-purple-700">AI</Link></li>
+          <li><Link to="/contact" className="hover:text-purple-700">Contact Us</Link></li>
           <li>
             <Link
-              to="/contact"
+              to="/login"
               className="bg-purple-700 text-white px-4 py-1 rounded-full hover:bg-purple-800"
             >
-              Contact
+              Login
             </Link>
           </li>
         </ul>

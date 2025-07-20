@@ -4,7 +4,7 @@ import { FaTwitter, FaFacebookF, FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white py-8 px-4 ">
+    <footer className="bg-blue-600 text-white py-8 px-4 ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         {/* Quick Links */}
@@ -12,7 +12,7 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
-            <li><Link to="/ai" className="hover:text-blue-400">AI</Link></li>
+            <li><Link to="/services" className="hover:text-blue-400">Services</Link></li>
             <li><Link to="/calculator" className="hover:text-blue-400">Calculator</Link></li>
           </ul>
         </div>
@@ -38,11 +38,11 @@ const Footer = () => {
         {/* Optional Extra Column (Brand or Logo) */}
         <div className="text-center md:text-left">
           <h3 className="text-xl font-semibold mb-4">Loan Mate</h3>
-          <p className="text-gray-400">Estimate your loan payments smarter and faster.</p>
+          <p className="text-gray-300">Estimate your loan payments smarter and faster.</p>
         </div>
       </div>
 
-      <div className="mt-8 text-center text-sm text-gray-500">
+      <div className="mt-8 text-center text-sm text-gray-300">
         &copy; {new Date().getFullYear()} Loan Mate. All rights reserved.
       </div>
     </footer>

@@ -53,9 +53,9 @@ const CalculatorPage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-6xl">
         {/* Left: Input Form */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-md text-white">
+        <div className="bg-white p-6 rounded-lg shadow-md text-white">
           {/* Loan Amount */}
-          <div className="mb-6">
+          <div className="mb-6 text-black">
             <label className="block font-semibold mb-2">Loan Amount:</label>
             <div className="flex items-center space-x-2">
               <span className="bg-white px-2 py-1 rounded text-black">₹</span>
@@ -78,7 +78,7 @@ const CalculatorPage = () => {
           </div>
 
           {/* Interest Rate */}
-          <div className="mb-6">
+          <div className="mb-6 text-black">
             <label className="block font-semibold mb-2">Interest Rate :</label>
             <div className="flex items-center space-x-2">
               <span className="bg-white px-2 py-1 rounded text-black">%</span>
@@ -102,7 +102,7 @@ const CalculatorPage = () => {
           </div>
 
           {/* Loan Term */}
-          <div>
+          <div className='text-black'>
             <label className="block font-semibold mb-2">Loan Tenure :</label>
             <div className="flex items-center space-x-2">
               <span className="bg-white px-2 py-1 rounded text-black">Months</span>
@@ -126,26 +126,26 @@ const CalculatorPage = () => {
         </div>
 
         {/* Center: EMI Details */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-md text-white">
-          <h2 className="text-xl font-bold text-center bg-green-300 text-blue-500 py-2 rounded mb-4">Your EMI Details</h2>
+        <div className="p-6 rounded-lg shadow-md text-black bg-white">
+          <h2 className="text-xl font-bold text-center py-2 rounded mb-4">Your EMI Details</h2>
           <div className="space-y-4 text-center text-blue-500 text-lg font-semibold">
             <div>
-              Loan EMI<br />
-              <span className="text-3xl text-white">₹{monthlyPayment}</span>
+              <p className='text-black'>Loan EMI</p><br />
+              <span className="text-3xl">₹{monthlyPayment}</span>
             </div>
             <div>
-              Total Interest Payable<br />
-              <span className="text-3xl text-white">₹{totalInterest}</span>
+              <p className='text-black'>Total Interest Payable</p><br />
+              <span className="text-3xl">₹{totalInterest}</span>
             </div>
             <div>
-              Total Payment<br />
-              <span className="text-3xl text-white">₹{totalPayment}</span>
+              <p className='text-black'>Total Payment</p><br />
+              <span className="text-3xl">₹{totalPayment}</span>
             </div>
           </div>
         </div>
 
         {/* Right: Donut Chart */}
-        <div className="bg-gray-900 p-6 rounded-lg shadow-md flex justify-center items-center text-white">
+        <div className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center text-white">
           <PieChart width={250} height={250}>
             <Pie
               data={data}
