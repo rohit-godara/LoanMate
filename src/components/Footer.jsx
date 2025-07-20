@@ -29,18 +29,18 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center">
               <FaPhone className="mr-3 text-blue-400" /> 
-              <span>+1 (555) 123-4567</span>
+              <span>+91 7461006900</span>
             </li>
             <li className="flex items-center">
               <FaTwitter className="mr-3 text-blue-400" />
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
-                @yourhandle
+              <a href="https://twitter.com/loanmate" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
+                @loanmate
               </a>
             </li>
             <li className="flex items-center">
               <FaFacebookF className="mr-3 text-blue-400" />
-              <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
-                facebook.com/yourpage
+              <a href="https://facebook.com/loanmate" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
+                facebook.com/loanmate
               </a>
             </li>
           </ul>
