@@ -4,6 +4,8 @@ import HeroSection from './HeroSection'
 import CalculatorPage from './CalculatorPage'
 import Layout from './components/Layout'
 import Services from './components/Services'
+import ContactPage from './components/ContactPage'
+
 
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
           <Route path='/' element={<HeroSection />} />
           <Route path='/Calculator' element={<CalculatorPage />} />
           <Route path='/Services' element={<Services />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Layout>
     </Router>    

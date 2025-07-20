@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <>
         {/* This is making empty space while navigating to Calculator Page */}
-        <div className='h-screen w-full bg-black/95 text-white '>
+        <div className='h-screen w-full bg-offwhite/95 text-black '>
             <p className='text-center pt-60 uppercase font-bold text-5xl text-zinc-300'><span className='text-blue-500 text-6xl'>Estimate</span> <br /> Your Monthly Payments Effortlessly!</p>
             <p className="text-lg text-center text-gray-600 mb-10">
             Use our smart loan calculator to find out your monthly payments, interest, and the best loan option tailored just for you.
