@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Hero */}
       <section className="min-h-screen w-full bg-gray-50 text-black flex flex-col items-center justify-center px-4">
         <div className="text-center max-w-3xl mt-40 sm:mt-52">
-          <h1 className="text-4xl sm:text-5xl font-bold uppercase text-zinc-700">
+          <h1 className="text-4xl sm:text-4xl font-bold uppercase text-zinc-700">
             <span className="text-blue-600 text-6xl block">Estimate</span>
             Your Monthly Payments Effortlessly!
           </h1>
