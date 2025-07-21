@@ -12,7 +12,7 @@ const SignupPage = () => {
         </p>
 
         <form className="space-y-5">
-          {/* Full Name */}
+
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
             <input
@@ -23,7 +23,6 @@ const SignupPage = () => {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <input
@@ -34,7 +33,6 @@ const SignupPage = () => {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
             <input
@@ -45,7 +43,6 @@ const SignupPage = () => {
             />
           </div>
 
-          {/* Confirm Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
             <input
@@ -56,7 +53,6 @@ const SignupPage = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-purple-700 text-white py-2 rounded-full hover:bg-purple-800 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -64,7 +60,6 @@ const SignupPage = () => {
             Sign Up
           </button>
 
-          {/* Login Link */}
           <div className="text-center mt-4">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}

@@ -9,13 +9,13 @@ const Navbar = () => {
   return (
     <nav className="bg-white text-black px-6 py-4 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo + Title */}
+        
         <div className="flex items-center space-x-3">
           <SiMoneygram className="text-3xl text-purple-700" />
           <span className="text-2xl font-extrabold text-purple-800">Loan Mate</span>
         </div>
 
-        {/* Hamburger (Mobile) */}
+        
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -25,7 +25,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Navigation Links - Desktop */}
+        
         <ul className="hidden md:flex space-x-6 font-medium items-center">
           <li><Link to="/" className="hover:text-purple-700">Home</Link></li>
           <li><Link to="/calculator" className="hover:text-purple-700">Calculator</Link></li>
@@ -42,7 +42,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile Menu */}
+    
       {menuOpen && (
         <div className="md:hidden mt-4 px-4 space-y-4 bg-white shadow-md py-4 rounded-md">
           <Link to="/" onClick={() => setMenuOpen(false)} className="block hover:text-purple-700">Home</Link>

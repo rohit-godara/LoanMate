@@ -7,7 +7,6 @@ import ContactPage from './components/ContactPage';
 const HeroSection = () => {
   return (
     <>
-      {/* Hero */}
       <section className="min-h-screen w-full bg-gray-50 text-black flex flex-col items-center justify-center px-4">
         <div className="text-center max-w-3xl mt-40 sm:mt-52">
           <h1 className="text-4xl sm:text-4xl font-bold uppercase text-zinc-700">
@@ -37,24 +36,20 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Divider */}
       <hr className="border border-gray-200 my-6" />
 
-      {/* Calculator */}
       <section id="calculator">
         <CalculatorPage />
       </section>
 
       <hr className="border border-gray-200 my-6" />
 
-      {/* Services */}
       <section id="services">
         <Services />
       </section>
 
       <hr className="border border-gray-200 my-6" />
 
-      {/* Contact */}
       <section id="contact">
         <ContactPage />
       </section>

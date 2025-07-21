@@ -51,11 +51,9 @@ const CalculatorPage = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-        {/* Input Form */}
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4 text-purple-700">Loan Details</h2>
-
-          {/* Loan Amount */}
+ 
           <div className="mb-6">
             <label className="block font-semibold text-sm text-gray-700 mb-1">Loan Amount</label>
             <div className="flex items-center gap-2">
@@ -80,7 +78,6 @@ const CalculatorPage = () => {
             />
           </div>
 
-          {/* Interest Rate */}
           <div className="mb-6">
             <label className="block font-semibold text-sm text-gray-700 mb-1">Interest Rate</label>
             <div className="flex items-center gap-2">
@@ -104,7 +101,6 @@ const CalculatorPage = () => {
             />
           </div>
 
-          {/* Loan Term */}
           <div>
             <label className="block font-semibold text-sm text-gray-700 mb-1">Loan Tenure</label>
             <div className="flex items-center gap-2">
@@ -131,7 +127,6 @@ const CalculatorPage = () => {
           </div>
         </div>
 
-        {/* EMI Summary */}
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
           <h2 className="text-xl font-bold text-purple-700 mb-4">Your EMI Details</h2>
           <div className="space-y-6 text-lg font-semibold">
@@ -149,8 +144,7 @@ const CalculatorPage = () => {
             </div>
           </div>
         </div>
-
-        {/* Chart */}
+        
         <div className="bg-white p-6 rounded-lg shadow-md flex justify-center items-center">
           <PieChart width={250} height={250}>
             <Pie

@@ -3,7 +3,7 @@ import React from 'react';
 const ContactPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex flex-col md:flex-row items-center justify-center gap-10">
-      {/* Left Side - Title + Text */}
+
       <div className="md:w-1/2 text-center md:text-left max-w-lg">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-purple-800 mb-4">
           Get In Touch
@@ -13,7 +13,6 @@ const ContactPage = () => {
         </p>
       </div>
 
-      {/* Right Side - Contact Form */}
       <div className="bg-white rounded-xl shadow-lg w-full max-w-lg p-6 sm:p-8 border-t-8 border-purple-300">
         <h3 className="text-xl sm:text-2xl font-bold text-purple-800 mb-6 text-center">
           Send Message

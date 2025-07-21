@@ -55,8 +55,8 @@ const Services = () => (
             href={service.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform duration-200 block"
-          >
+            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform duration-200 block">
+              
             <div className="flex justify-center mb-4">
               <div className="bg-green-500 text-white p-4 rounded-full">
                 {service.icon}
